@@ -1,7 +1,7 @@
 {
-  "name": "javagoat-whatsapp-bot",
-  "version": "2.1.0",
-  "description": "Automated WhatsApp Quotation & Invoice Bot with PDF Generation",
+  "name": "whatsapp-order-bot",
+  "version": "2.0.0",
+  "description": "WhatsApp Order Bot with Quotations & Invoices",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
@@ -9,7 +9,6 @@
   "dependencies": {
     "@whiskeysockets/baileys": "6.6.0",
     "qrcode-terminal": "^0.12.0",
-    "pino": "^8.19.0",
-    "pdf-lib": "^1.17.1"
+    "pino": "^8.19.0"
   }
 }
