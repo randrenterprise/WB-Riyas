@@ -1,7 +1,7 @@
 name: WhatsApp Business Bot
 
 on:
-  workflow_dispatch:  # Manual trigger only
+  workflow_dispatch:
 
 jobs:
   bot:
@@ -16,11 +16,11 @@ jobs:
           node-version: '20'
 
       - name: Install Dependencies
-        run: npm install
+        run: |
+          npm install
+          npm list --depth=0
 
       - name: Start WhatsApp Bot
         env:
           FIREBASE_URL: ${{ secrets.FIREBASE_URL }}
-          BUSINESS_NAME: ${{ secrets.BUSINESS_NAME }}
-          CURRENCY: ${{ secrets.CURRENCY }}
-          DELIVERY_FEE: ${{ secrets
+        run: node index.js
