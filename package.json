@@ -1,7 +1,7 @@
 {
-  "name": "cctv-service-bot",
-  "version": "1.0.0",
-  "description": "WhatsApp Bot for CCTV & Electrical Services",
+  "name": "advanced-whatsapp-service-bot",
+  "version": "2.0.0",
+  "description": "Advanced WhatsApp Bot with Auto PDF Generation",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
