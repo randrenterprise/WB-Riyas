@@ -158,7 +158,7 @@ async function startBot() {
                 return;
             }
 
-            let menuMessage = "🍔 *JAVAGOAT LIVE MENU* 🍕\n\n";
+            let menuMessage = "🍔 *LIVE MENU* 🍕\n\n";
             currentMenu.forEach(item => {
                 menuMessage += `🔸 *${item.name}* - ₹${item.price}\n`;
             });
@@ -169,10 +169,10 @@ async function startBot() {
 
         // --- GREETINGS ---
         else if (text.includes("hi") || text.includes("hello") || text.includes("hey")) {
-            await sock.sendMessage(sender, { text: "👋 *Welcome to JavaGoat!* \n\nI am your AI Assistant. Type *menu* to see our delicious food, or type *order [dish]* to buy instantly!" });
+            await sock.sendMessage(sender, { text: "👋 *Welcome to R & R Enterprise!* \n\nI am your AI Assistant. Type *menu* to see our delicious food, or type *order [dish]* to buy instantly!" });
         }
         else if (text.includes("contact") || text.includes("call")) {
-            await sock.sendMessage(sender, { text: "📞 *Contact JavaGoat:* \n\n- *Email:* support@javagoat.com" });
+            await sock.sendMessage(sender, { text: "📞 *Contact Riyas Bro:* \n\n- *Email:* randrenterprise483@gmail.com" });
         }
         else {
             await sock.sendMessage(sender, { text: "🤔 I didn't quite catch that.\n\nType *menu* to see our food list, or *order [food]* to place an order!" });
