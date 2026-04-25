@@ -1,26 +1,26 @@
-name: WhatsApp Order Bot
+name: WhatsApp Business Bot
 
 on:
-  workflow_dispatch:  # Manual trigger
-  schedule:
-    - cron: '*/5 * * * *'  # Every 5 minutes
+  workflow_dispatch:  # Manual trigger only
 
 jobs:
   bot:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: Checkout Code
         uses: actions/checkout@v4
-      
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-      
-      - name: Install dependencies
+
+      - name: Install Dependencies
         run: npm install
-      
+
       - name: Start WhatsApp Bot
         env:
           FIREBASE_URL: ${{ secrets.FIREBASE_URL }}
-        run: node index.js
+          BUSINESS_NAME: ${{ secrets.BUSINESS_NAME }}
+          CURRENCY: ${{ secrets.CURRENCY }}
+          DELIVERY_FEE: ${{ secrets
