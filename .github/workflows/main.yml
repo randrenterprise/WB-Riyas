@@ -1,17 +1,26 @@
-name: JavaGoat-WhatsApp-Bot
+name: WhatsApp Order Bot
+
 on:
-  workflow_dispatch:
+  workflow_dispatch:  # Manual trigger
   schedule:
-    - cron: '0 */5 * * *'
+    - cron: '*/5 * * * *'  # Every 5 minutes
+
 jobs:
-  build:
+  bot:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - run: npm install
-      - run: npm start
+      
+      - name: Install dependencies
+        run: npm install
+      
+      - name: Start WhatsApp Bot
         env:
           FIREBASE_URL: ${{ secrets.FIREBASE_URL }}
+        run: node index.js
