@@ -1,5 +1,5 @@
 {
-  "name": "javagoat-whatsapp-bot",
+  "name": "whatsapp-bot",
   "version": "1.0.0",
   "description": "WhatsApp Bot linked to JavaGoat App",
   "main": "index.js",
